@@ -19,9 +19,22 @@
 > props doesnt change and they are immutable,beacause mutating props would affecrt parent,creating side effects.
 > IF you need to mutate props you need state
 > Component should not mutate any data that we write outside of its function scope
+> It 's one-way
 
 ## CHALLENGES
 
 ### Number 1
 
 > https://codesandbox.io/p/sandbox/fervent-wilson-pshzpd?file=%2Fsrc%2FApp.js%3A49%2C20-49%2C25
+
+### Number 2
+
+> https://codesandbox.io/p/sandbox/fervent-wilson-pshzpd?file=%2Fsrc%2FApp.js%3A101%2C2
+
+# React fragment <></>
+
+> We use it when we want to have two html element in JSX
+
+# Component
+
+> Data + JS logic + Appearance: JSX(html+css+ JS inside{})
