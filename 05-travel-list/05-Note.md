@@ -25,3 +25,17 @@
 # Challenge number 2
 
 > https://codesandbox.io/p/devbox/delicate-river-4f99ly?file=%2Fsrc%2FApp.js%3A38%2C22&workspaceId=ws_97TgecUKhuvkXniW8WqmAM
+
+> Whenever multiple siblings components need to access to the same state,we need to move that piece of state up to the first common parent component.
+
+# child to parent communication(inverse data flow)
+
+> child updating parent state(data flowing up)
+
+# Derived state
+
+> state that is computed from existing state
+
+## Note
+
+> Sort item mutate items so we should ise slice.sort() instead.
