@@ -39,3 +39,4 @@
 ## Note
 
 > Sort item mutate items so we should ise slice.sort() instead.
+> React developement use export default instead of named export.
