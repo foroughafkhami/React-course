@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -16,8 +15,7 @@ export default function App() {
   }
   function handleNext() {
     if (step < 3) {
-      setStep((s) => s + 2);
-
+      setStep((s) => s + 1);
       // BAD PRACTICE
       // test.name="Fred"
 
@@ -42,21 +40,26 @@ export default function App() {
             {/* {test.name} */}
           </p>
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={handlePrevious}
-            >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={handleNext}
-            >
-              Next
-            </button>
+            <Button bgColor="#7950f2" textColor="#fff" onClick={handlePrevious}>
+              <span>👈</span> Previous
+            </Button>
+            <Button bgColor="#7950f2" textColor="#fff" onClick={handleNext}>
+              Next <span>👉</span>
+            </Button>
           </div>
         </div>
       )}
     </>
+  );
+}
+
+function Button({ textColor, bgColor, onClick, children }) {
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }
