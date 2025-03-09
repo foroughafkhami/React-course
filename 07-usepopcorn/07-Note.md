@@ -8,3 +8,7 @@
 
 1. children prop
 2. explicit prop
+
+# Note
+
+> event always needs to handle on JSX element
