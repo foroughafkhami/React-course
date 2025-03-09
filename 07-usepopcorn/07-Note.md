@@ -12,3 +12,9 @@
 # Note
 
 > event always needs to handle on JSX element
+
+# Challenge
+
+## Number 1
+
+> https://codesandbox.io/p/sandbox/react-challenge-text-expander-starter-forked-dx7j8l?file=%2Fsrc%2FApp.js%3A59%2C19
