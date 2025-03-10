@@ -24,3 +24,14 @@
 > react its self never touched the dom, it s reactdom
 > react native is to make android and ios apps
 > remotion is used to create videos
+
+# state update batching
+
+> updating in react is asynchronous,bcd updated state variables are not immediately available after setState call,but only after the re-render
+> This also apllies when only one state variable is updated
+> ![alt text](image.png)
+
+> If put state update in ReactDom.flushSync() the automatic batching is disabled.
+> If you need to update a state based on the current or previous state,you need to use callback function instead of just a value
+
+> batching happens inside eventhandlers,set timeout and pronmises
