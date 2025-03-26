@@ -28,3 +28,19 @@
 > can be make using : event handler,effects(use effect)
 > it s better to use event handlers.
 > In strict mode events run multiple times but only in development.
+
+# React strict mode
+
+> In strict mode our effects will not run only once,but actually twice but only in development.
+
+# Effect
+
+> By default,effects run after every render. We can prevent that by passing a dependency array(second augument).
+> Each time amy of the dependencies changes,the effect will be executed again.
+> Dependencies are state variables and props.
+> Every state variable and prop used inside the effect must be included in the dependecy array or we lead to a bug stale closure.
+> Effects and life cycle of components are deeply connected.
+
+![alt text](useeffect-synchronization.png)
+
+> Effect runs after the browser paint.
