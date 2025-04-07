@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-
 const containerStyle = {
   display: "flex",
   alignItems: "center",
