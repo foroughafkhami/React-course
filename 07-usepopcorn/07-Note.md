@@ -89,3 +89,17 @@
 ## Hooks rely on call order
 
 ![alt text](hook-callOrder.png)
+
+## use useEffect
+
+```js
+// React only looks at initial state on initial render
+const [isTop, setIsTop] = useState(imdbRating > 8);
+console.log(isTop);
+useEffect(
+  function () {
+    setIsTop(imdbRating > 8);
+  },
+  [imdbRating]
+);
+```
