@@ -116,3 +116,7 @@ useEffect(
 ## Ref vs State
 
 ![alt text](refVsState.png)
+
+# Reusing login with custom hooks
+
+![alt text](customHook.png)
