@@ -55,7 +55,7 @@ const KEY = "223c96c0";
 export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
-  const { movies, error, isLoading } = useMovies(query, handleCloseMovie);
+  const { movies, error, isLoading } = useMovies(query /*,handleCloseMovie*/);
   const [watched, setWatched] = useState([]);
   /*
   useEffect(function () {

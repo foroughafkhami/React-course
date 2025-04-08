@@ -77,3 +77,7 @@
 # Exports
 
 > Use default exports for components and use named exports for custom hooks.
+
+# Custom hook
+
+> It needs a react hook or it s just a function.
