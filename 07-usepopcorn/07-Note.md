@@ -69,3 +69,7 @@
 > is used to cleanup a fetch request.
 > When we have multiple fetch requests and we want the data of the last one.Instead of doing all the fetch requests, we can cancel the previous one as we get a new fetch request using abort controller.
 > Each time we abort a fetch request, Js sees it as an error.
+
+# CHALLENGE 1 Currency Convertor in Part12 of the course
+
+> https://codesandbox.io/p/sandbox/currency-convertot-vtk8cd?file=%2Fsrc%2FApp.js%3A58%2C37
