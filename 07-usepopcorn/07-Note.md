@@ -103,3 +103,16 @@ useEffect(
   [imdbRating]
 );
 ```
+
+# Summary of useState hook
+
+![alt text](useState.png)
+
+# Ref hook
+
+> It gives us an object with a mutable object property. And it persist between renders
+> ![alt text](useRef.png)
+
+## Ref vs State
+
+![alt text](refVsState.png)
