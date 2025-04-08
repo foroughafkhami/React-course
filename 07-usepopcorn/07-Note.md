@@ -81,3 +81,11 @@
 # Custom hook
 
 > It needs a react hook or it s just a function.
+
+# Hooks
+
+![alt text](ruleOfHooks.png)
+
+## Hooks rely on call order
+
+![alt text](hook-callOrder.png)
