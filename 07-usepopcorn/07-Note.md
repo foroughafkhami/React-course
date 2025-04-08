@@ -63,3 +63,9 @@
       };
     },
 ```
+
+# Abort Controller
+
+> is used to cleanup a fetch request.
+> When we have multiple fetch requests and we want the data of the last one.Instead of doing all the fetch requests, we can cancel the previous one as we get a new fetch request using abort controller.
+> Each time we abort a fetch request, Js sees it as an error.
