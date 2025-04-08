@@ -44,3 +44,22 @@
 ![alt text](useeffect-synchronization.png)
 
 > Effect runs after the browser paint.
+
+# Cleanup function in useEffect
+
+![alt text](cleanUp.png)
+
+## example
+
+```js
+  useEffect(
+    function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+      return function () {
+        document.title = "usePopcorn";
+        // Clean up function runs after the component unmounted but Closure makes the function remembers all the variables that were present at the time and the place that the function was created
+        console.log(`Clean up effect for movie ${title}`);
+      };
+    },
+```
