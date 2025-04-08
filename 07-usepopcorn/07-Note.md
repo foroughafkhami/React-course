@@ -120,3 +120,7 @@ useEffect(
 # Reusing login with custom hooks
 
 ![alt text](customHook.png)
+
+# CHALLENGE 1 use Geolocate in Part 13 of the course
+
+> https://codesandbox.io/p/sandbox/staging-breeze-yqdzph?file=%2Fsrc%2FApp.js%3A41%2C19
