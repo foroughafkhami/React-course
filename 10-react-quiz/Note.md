@@ -26,3 +26,9 @@ useEffect(function () {
     .catch((err) => dispatch({ type: "dataFailed" }));
 }, []);
 ```
+
+4- To run the fake server we need to run this command in the terminal:
+
+```
+npm run server
+```
