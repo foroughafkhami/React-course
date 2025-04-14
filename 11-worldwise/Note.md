@@ -70,3 +70,40 @@ export default defineConfig({
 Example: cta-link
 2- JS way:(camelCase)
 Example: ctaLink
+
+# Route
+
+## Outlet and index Route
+
+> It is used to create nested routes
+> Index is used make default route.
+
+```js
+<Route path="app" element={<AppLayout />}>
+  <Route index element={<p>list of cities</p>} />
+  <Route path="cities" element={<p>list of cities</p>} />
+</Route>
+```
+
+```js
+# re-render nested route
+function Sidebar() {
+  return (
+    <div className={styles.sidebar}>
+      <Logo />
+      <AppNav />
+      <Outlet />
+
+    </div>
+  );
+}
+```
+
+# How to create a fake API
+
+1. Install json server
+   ` npm i json-server`
+2. Add the below script into package.json file
+   `    "server": "json-server --watch data/cities.json --port 8000 -delay 500"`
+3. To run the server use:
+   ` npm run server`
