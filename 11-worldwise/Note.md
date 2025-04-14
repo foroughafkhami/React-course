@@ -63,3 +63,10 @@ export default defineConfig({
 ```
 
 ### compusing classes?
+
+### Javascript way of writing a variable name in css
+
+1- in css way:
+Example: cta-link
+2- JS way:(camelCase)
+Example: ctaLink
