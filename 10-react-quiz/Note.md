@@ -48,3 +48,7 @@ useEffect(
   [dispatch]
 );
 ```
+
+# CHALLENGE NUMBER 1 PART 16(bank account using useReducer)
+
+> https://codesandbox.io/p/sandbox/3rwq5h?file=%2Fsrc%2FApp.js%3A61%2C1
