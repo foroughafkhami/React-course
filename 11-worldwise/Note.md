@@ -38,3 +38,11 @@ export default defineConfig({
 > Single Page application is good because there will never be a complete page reload.
 > Makes the app natural.
 > When URL changes,Dom will update. And react update the DOM.
+
+# how to make a single page application
+
+> We dont want hard refreshes,we want to move from one page to another.
+
+```js
+<Link to="/pricing">Pricing</Link>
+```
