@@ -32,3 +32,19 @@ useEffect(function () {
 ```
 npm run server
 ```
+
+# Clean up a Timer
+
+> For example here in this app we need to cleanup the timer otherwise we will have multiple timers running even after finishing the quiz. Here how to clean up
+
+```js
+useEffect(
+  function () {
+    const id = setInterval(function () {
+      dispatch({ type: "tick" });
+    }, 1000);
+    return () => clearInterval(id);
+  },
+  [dispatch]
+);
+```
