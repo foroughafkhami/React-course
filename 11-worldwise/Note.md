@@ -46,3 +46,20 @@ export default defineConfig({
 ```js
 <Link to="/pricing">Pricing</Link>
 ```
+
+# Styling options in React
+
+![alt text](styling-options.png)
+
+> Css module: create one external css file per component
+
+## how to define global classes
+
+```js
+.nav :global(.active) {
+  background-color: green;
+}
+
+```
+
+### compusing classes?
