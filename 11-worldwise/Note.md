@@ -140,3 +140,26 @@ return <h1>City {id}</h1>
 ```
 
 ## Read and set Query String
+
+```js
+     <Link
+        className={styles.cityItem}
+        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+      >
+```
+
+```js
+function Map() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const lat = searchParams.get("lat");
+  const lng = searchParams.get("lng");
+  return (
+    <div className={styles.mapContainer}>
+      <h1>Map</h1>
+      <h1>
+        Position:{lat},{lng}
+      </h1>
+    </div>
+  );
+}
+```
