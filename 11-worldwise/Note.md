@@ -163,3 +163,40 @@ function Map() {
   );
 }
 ```
+
+# UseNavigate
+
+```js
+function Map() {
+  const navigate = useNavigate();
+
+  return (
+    <div
+      className={styles.mapContainer}
+      onClick={() => {
+        navigate("form");
+      }}
+
+    ></div>);
+```
+
+## navigate back
+
+> -1 means to navigate 1 step back in browser history.
+
+```js
+
+   <Button type="back" onClick={(e) =>
+  { e.preventDefault()
+    navigate("-1")}}>
+```
+
+### Use navigate to redirect to a page
+
+> declaritive way of using navigate
+
+```js
+<Route index element={<Navigate replace to={cities} />} />
+```
+
+> replace: replace the current element in the history stack
