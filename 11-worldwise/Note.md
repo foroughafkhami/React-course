@@ -107,3 +107,36 @@ function Sidebar() {
    `    "server": "json-server --watch data/cities.json --port 8000 -delay 500"`
 3. To run the server use:
    ` npm run server`
+
+# State management using url
+
+> Params: used to pass data to the next page
+> Query string: to store global state that should be accessable everywhere.
+
+## Params with react router
+
+1. create a new route
+
+   > The element that should be rendered when the url matches the path
+
+```js
+<Route path="cities/:id" element={<City />} />
+```
+
+2. link that to route
+   > We create a link that we can move to the application page bt passing the id data
+
+```
+<Link className={styles.cityItem} to={`${id}`}>
+```
+
+3. In that route we read the state from URL
+   > We read data from URL using useParams
+
+```js
+function City() {
+const { id } = useParams();
+return <h1>City {id}</h1>
+```
+
+## Read and set Query String
