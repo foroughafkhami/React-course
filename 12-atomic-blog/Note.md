@@ -31,3 +31,15 @@ const PostContext = createContext();
 ```js
 const { onClearPosts } = useContext(PostContext);
 ```
+
+# Different type of states
+
+![alt text](TypeOfState.png)
+
+## State placement
+
+![alt text](statePlacement.png)
+
+# State management tools
+
+![alt text](stateManagementTool.png)
