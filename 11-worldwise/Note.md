@@ -241,3 +241,11 @@ const res = await fetch(`${BASE_URL}/cities`, {
 > reducer function is a pure function so we can
 > not do API requests inside it,so we do fetch requests in seperate functions and after the data recieved we can dispatch actions to the reducer.
 > When we have async code, we dont get that nice benefit wherewe can simply pass the dispatch function into the context value.
+
+# Authentication Steps
+
+1. Get users email and password from a login form and check with an API endpoint,if the password for given email is correct.
+
+2. IF the info are correct,we then redirect the use to main application page and save the user object in our state.
+
+3. protect application from unauthorized access who are not logged in.
