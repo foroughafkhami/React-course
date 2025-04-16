@@ -35,6 +35,54 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Horcajo de Montemayor",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-04-16T09:22:31.500Z",
+      "notes": "gaj",
+      "position": {
+        "lat": "40.41504191417891",
+        "lng": "-5.888671875"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Horcajo de Montemayor",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-04-16T09:22:31.500Z",
+      "notes": "gaj",
+      "position": {
+        "lat": "40.41504191417891",
+        "lng": "-5.888671875"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Iruna Oka / Iruna de Oca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-04-16T09:26:26.386Z",
+      "notes": "",
+      "position": {
+        "lat": "42.844622619644966",
+        "lng": "-2.83447265625"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Valliere",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-04-16T09:27:06.033Z",
+      "notes": "bea",
+      "position": {
+        "lat": "45.92118726792917",
+        "lng": "2.0654296875000004"
+      },
+      "id": 98443201
     }
   ]
 }

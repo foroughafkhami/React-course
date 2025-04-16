@@ -202,3 +202,36 @@ function Map() {
 > replace: replace the current element in the history stack
 
 # React leaflet library
+
+# htmlFor
+
+> It is for in html and it will select the element with the id specified in the htmlFor.
+
+```js
+<label htmlFor="date">When did you go to {cityName}?</label>;
+{
+  /* <input
+          id="date"
+          onChange={(e) => setDate(e.target.value)}
+          value={date}
+        /> */
+}
+<DatePicker
+  id="date"
+  onChange={(date) => setDate(date)}
+  selected={date}
+  dateFormat={"dd/MM/yyyy"}
+/>;
+```
+
+# Create a post request to an API
+
+```js
+const res = await fetch(`${BASE_URL}/cities`, {
+  method: "POST",
+  body: JSON.stringify(newCity),
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+```
