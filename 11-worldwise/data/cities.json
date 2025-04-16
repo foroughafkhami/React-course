@@ -35,30 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
-    },
-    {
-      "cityName": "Horcajo de Montemayor",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-04-16T09:22:31.500Z",
-      "notes": "gaj",
-      "position": {
-        "lat": "40.41504191417891",
-        "lng": "-5.888671875"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Horcajo de Montemayor",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-04-16T09:22:31.500Z",
-      "notes": "gaj",
-      "position": {
-        "lat": "40.41504191417891",
-        "lng": "-5.888671875"
-      },
-      "id": 98443199
     }
   ]
 }

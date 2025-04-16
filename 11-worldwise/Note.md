@@ -235,3 +235,9 @@ const res = await fetch(`${BASE_URL}/cities`, {
   },
 });
 ```
+
+# Reeducer function
+
+> reducer function is a pure function so we can
+> not do API requests inside it,so we do fetch requests in seperate functions and after the data recieved we can dispatch actions to the reducer.
+> When we have async code, we dont get that nice benefit wherewe can simply pass the dispatch function into the context value.
