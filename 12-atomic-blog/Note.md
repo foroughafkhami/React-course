@@ -91,7 +91,10 @@ export default function Test() {
 ![alt text](memoFunction.png)
 
 > If memoize a component but give the component objects or functions as props,the component will always rerender,because it sees these props as new props eventhough they are the same.
-> Solution: make objects or functions stable,by memoize them.(by useMemo(for any value to memoize),useCallback(only to memoize functions))
+> Solution: make objects or functions stable,by memoize them.
+
+1.  useMemo(for any value to memoize)
+2.  useCallback(only to memoize functions)
 
 ![alt text](useMemo-useCallback.png)
 ![alt text](useMemo-usecases.png)
