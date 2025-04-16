@@ -55,3 +55,37 @@ const { onClearPosts } = useContext(PostContext);
 ![alt text](whenToRerender.png)
 
 > when a prop changes a component doesnt change because of prop change,but it re-renders because of parent re-render.
+
+> When we pass components with children prop. Parent changing doesnt affect children re-render because they were already created before the component and no state change can affect them. unless they also cosume the context themselves.
+
+```js
+function Counter({ children }) {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button onClick={() => setCount((c) => c + 1)}>Increase: {count}</button>
+      {children}
+    </div>
+  );
+}
+export default function Test() {
+  return (
+    <div>
+      <h1>Slow counter?!?</h1>
+      <Counter>
+        <SlowComponent />
+      </Counter>
+    </div>
+  );
+}
+```
+
+# Memoization
+
+1. memoize components with memo
+2. memoize objects with useMemo
+3. memoize functions with useCallback
+
+## Memo function
+
+![alt text](memoFunction.png)
