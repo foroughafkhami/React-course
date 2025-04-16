@@ -43,3 +43,15 @@ const { onClearPosts } = useContext(PostContext);
 # State management tools
 
 ![alt text](stateManagementTool.png)
+
+# Performance optimization and Wasted renders
+
+## Performance optimization tools
+
+![alt text](performanceOpt.png)
+
+## when does a components instance re-render
+
+![alt text](whenToRerender.png)
+
+> when a prop changes a component doesnt change because of prop change,but it re-renders because of parent re-render.

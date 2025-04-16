@@ -1,4 +1,4 @@
-import { useEffect, useState, createContext, useContext } from "react";
+import { useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
 import { PostProvider, usePosts } from "./PostContext";
 
@@ -91,7 +91,7 @@ function Posts() {
 function FormAddPost() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const onAddPost = usePosts();
+  const { onAddPost } = usePosts();
   const handleSubmit = function (e) {
     e.preventDefault();
     if (!body || !title) return;
