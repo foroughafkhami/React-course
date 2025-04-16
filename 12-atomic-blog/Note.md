@@ -89,3 +89,13 @@ export default function Test() {
 ## Memo function
 
 ![alt text](memoFunction.png)
+
+> If memoize a component but give the component objects or functions as props,the component will always rerender,because it sees these props as new props eventhough they are the same.
+> Solution: make objects or functions stable,by memoize them.(by useMemo(for any value to memoize),useCallback(only to memoize functions))
+
+![alt text](useMemo-useCallback.png)
+![alt text](useMemo-usecases.png)
+
+# stale closure
+
+> If we dont add dependencies in the dependency array of useMemo, we will have stale closure because our function is still remembering the old values
