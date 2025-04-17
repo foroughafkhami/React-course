@@ -273,3 +273,16 @@ const Homepage = lazy(() => import("./pages/Homepage"));
 ```js
 <Suspense fallback={<SpinnerFullPage />}></Suspense>
 ```
+
+# UseEffect dependency array rules
+
+> we shouldnt use objects in dependency array because react checks them with triple equality and js changes the refrence of objects in every render.
+> ![alt text](useEffect-depend-arr.png)
+
+## how to have objects in dependency array
+
+![alt text](object-dep-arr.png)
+
+## where not to use effect
+
+![alt text](no-useEffect.png)
