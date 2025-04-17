@@ -102,3 +102,15 @@ export default function Test() {
 # stale closure
 
 > If we dont add dependencies in the dependency array of useMemo, we will have stale closure because our function is still remembering the old values
+
+> Setter functions of useState hooks always have a stable identity,which means that they will not change on renders.(automatically memoized) --> So it 's ok to to remove them from dependency array of hooks like:useEffect,useMemo,useCallback. For Example:
+
+```js
+const handleAddPost = useCallback(function handleAddPost(post) {
+  setPosts((posts) => [post, ...posts]);
+}, []);
+```
+
+# Note
+
+> It's better to create one context per state.
