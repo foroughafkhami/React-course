@@ -1,7 +1,6 @@
 import { useState, memo } from "react";
 import clickSound from "./ClickSound.m4a";
 import { useEffect } from "react";
-import { useCallback } from "react";
 
 function Calculator({ workouts, allowSound }) {
   const [number, setNumber] = useState(workouts.at(0).numExercises);
@@ -39,6 +38,13 @@ function Calculator({ workouts, allowSound }) {
       playSound();
     },
     [duration, allowSound]
+  );
+
+  useEffect(
+    function () {
+      document.title = `Your ${number}-exercise workout`;
+    },
+    [number]
   );
   function handleInc() {
     setDuration((duration) => (duration > 1 ? Math.floor(duration) + 1 : 0));
