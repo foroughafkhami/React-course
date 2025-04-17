@@ -249,3 +249,27 @@ const res = await fetch(`${BASE_URL}/cities`, {
 2. IF the info are correct,we then redirect the use to main application page and save the user object in our state.
 
 3. protect application from unauthorized access who are not logged in.
+
+# Bundle and code Splitting
+
+![alt text](bundle.png)
+
+## How to create js bundle
+
+```
+npm run build
+```
+
+## lazy loading
+
+![alt text](lazyLoading.png)
+
+```js
+const Homepage = lazy(() => import("./pages/Homepage"));
+```
+
+> To show loading Spinner before loading a new page,we can use React's suspense API.
+
+```js
+<Suspense fallback={<SpinnerFullPage />}></Suspense>
+```
