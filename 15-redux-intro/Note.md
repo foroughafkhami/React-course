@@ -12,3 +12,14 @@ console.log(store.getState());
 
 > Action creators are simple functions that return action.
 > But redux would also work without it.
+
+## Reducers
+
+> If we have multiple reducers,we would actually combine them into rootReducer like this:
+
+```js
+const rootReducer = combineReducers({
+  account: accountReducer,
+  customer: customerReducer,
+});
+```
