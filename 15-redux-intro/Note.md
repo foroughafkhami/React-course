@@ -80,3 +80,19 @@ function handleClick() {
   dispatch(CreateCustomer(fullName, nationalId));
 }
 ```
+
+# connect react and redux
+
+> useSelector and useDispatch are modern way of connecting react and redux store.
+> The old version is using connectAPI.
+
+# Old way of connecting components to redux
+
+```js
+function mapStateToProps(state) {
+  return {
+    balance: state.account.balance,
+  };
+}
+export default connect(mapStateToProps)(BalanceDisplay);
+```
