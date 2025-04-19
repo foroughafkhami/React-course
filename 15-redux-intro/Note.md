@@ -140,3 +140,38 @@ export function deposit(amount, currency) {
   };
 }
 ```
+
+# middleware DevTools
+
+1. install chrome redux devTools extension
+2. install redux package
+
+```js
+npm i redux-devtools-extension
+
+```
+
+# Modern way of writing redux(redux Toolkit)
+
+![alt text](reduxToolkit.png)
+
+# install redux toolkit
+
+```
+npm i @reduxjs/toolkit
+```
+
+```js
+import { configureStore } from "@reduxjs/toolkit";
+```
+
+> ConfigreStore will automatically will combine our reducers,add thunk middleware,setup devloper tools.
+
+```js
+const store = configureStore({
+  reducer: {
+    account: accountReducer,
+    customer: customerReducer,
+  },
+});
+```
