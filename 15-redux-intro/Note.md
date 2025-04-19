@@ -175,3 +175,7 @@ const store = configureStore({
   },
 });
 ```
+
+## createSlice
+
+> with createslice,we can mutate our state inside reducers.
