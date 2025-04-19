@@ -96,3 +96,47 @@ function mapStateToProps(state) {
 }
 export default connect(mapStateToProps)(BalanceDisplay);
 ```
+
+# Extend functionality of redux by MIDDLEWARE
+
+> Where to fetch data from API? not in store, not in component,but in middleware
+> middleware: is a function that sits between dispatching the action and the store.Allows us to run after dispatching,but before reaching the reducer in the store.
+> ![alt text](middleware.png)\
+> Most popular middleware in Redux is Redux Thunk.
+> Middleware makes dispatch function to wait before getting into the store.
+
+## how to use middleware
+
+1. install middleware package
+
+```
+npm i redux-thunk
+```
+
+2. apply that middleware to our store
+
+```js
+const store = createStore(rootReducer, applyMiddleware(thunk));
+```
+
+3. use middleware in our action creator functions
+
+```js
+export function deposit(amount, currency) {
+  console.log(currency);
+  if (currency === "USD") return { type: "account/deposit", payload: amount };
+  return async function (dispatch, getState) {
+    dispatch({ type: "account/convertingCurrency" });
+    // API call
+    console.log(currency, amount);
+    const res = await fetch(
+      `https://api.frankfurter.app/latest?amount=${amount}&from=${currency}&to=USD`
+    );
+    const data = await res.json();
+    console.log(data);
+    const converted = data.rates.USD;
+    dispatch({ type: "account/deposit", payload: converted });
+    // return action
+  };
+}
+```
