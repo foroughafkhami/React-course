@@ -64,3 +64,19 @@ export default Customer;
 ```
 
 > This component is subsccribed to store,and when store changes,this component that was subscribe to that store will re-render.
+
+### how to access dispatch hook
+
+> We can use custom hook that was provided to us by react redux package.
+
+```js
+const dispatch = useDispatch();
+import { useDispatch } from "react-redux";
+import { CreateCustomer } from "./customerSlice";
+
+const dispatch = useDispatch();
+
+function handleClick() {
+  dispatch(CreateCustomer(fullName, nationalId));
+}
+```
