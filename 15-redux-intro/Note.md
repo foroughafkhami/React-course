@@ -146,10 +146,15 @@ export function deposit(amount, currency) {
 1. install chrome redux devTools extension
 2. install redux package
 
-```js
+````js
 npm i redux-devtools-extension
 
-```
+> code Example:
+```js
+    dispatch(deposit(depositAmount, currency));
+
+
+````
 
 # Modern way of writing redux(redux Toolkit)
 
@@ -179,3 +184,36 @@ const store = configureStore({
 ## createSlice
 
 > with createslice,we can mutate our state inside reducers.
+
+## 2 auguments in actions in reducer in toolkit
+
+> we need to prepare payload for thaat
+
+```js
+reducers: {
+    createCustomer: {
+      prepare(fullName, nationalID) {
+        return {
+          payload: {
+            fullName,
+            nationalID,
+            createdAt: new Date().toISOString(),
+          },
+        };
+      },
+      reducer(state, action) {
+        state.fullName = action.payload.fullName;
+        state.nationalID = action.payload.nationalID;
+        state.createdAt = action.payload.createdAt;
+      },
+    },
+}
+
+```
+
+# Context API + reducer vs REDUX
+
+# when to use which one
+
+![alt text](contextVsRedux.png)
+![alt text](whenToUSe.png)
