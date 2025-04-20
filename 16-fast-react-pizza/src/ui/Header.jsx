@@ -3,7 +3,7 @@ import SearchOrder from '../features/order/searchOrder';
 import UserName from '../features/user/UserName';
 function Header() {
   return (
-    <header className="border-b border-stone-200 bg-yellow-500 px-4 py-3 uppercase">
+    <header className="border-b border-stone-200 bg-yellow-500 px-4 py-3 uppercase sm:px-6">
       <Link to="/" className="tracking-widest">
         Fast React Pizza Co.
       </Link>

@@ -2,8 +2,8 @@
 
 ```js
 const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/menu", element: <Menu /> },
+  { path: '/', element: <Home /> },
+  { path: '/menu', element: <Menu /> },
 ]);
 function App() {
   return <RouterProvider router={router} />;
@@ -19,11 +19,11 @@ const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/menu", element: <Menu /> },
-      { path: "/cart", element: <Cart /> },
-      { path: "/order/new", element: <CreateOrder /> },
-      { path: "/order/:orderId", element: <Order /> },
+      { path: '/', element: <Home /> },
+      { path: '/menu', element: <Menu /> },
+      { path: '/cart', element: <Cart /> },
+      { path: '/order/new', element: <CreateOrder /> },
+      { path: '/order/:orderId', element: <Order /> },
     ],
   },
 ]);
@@ -74,7 +74,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/menu",
+        path: '/menu',
         element: <Menu />,
         loader: menuLoader,
         errorElement: <Error />,
@@ -103,7 +103,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/order/new",
+        path: '/order/new',
         element: <CreateOrder />,
         action: createOrderAction,
       },
@@ -121,7 +121,7 @@ export async function action({ request }) {
   const order = {
     ...data,
     cart: JSON.parse(data.cart),
-    priority: data.priority === "on",
+    priority: data.priority === 'on',
   };
   // It will do post request
   const newOrder = await createOrder(order);
@@ -136,3 +136,10 @@ export async function action({ request }) {
 > This feature is used for error handling.
 
 # Tailwind
+
+## responsive design
+
+```js
+sm: px - 6;
+// this value will apply for sm and larger screens.
+```
