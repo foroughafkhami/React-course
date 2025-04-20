@@ -85,3 +85,52 @@ const router = createBrowserRouter([
 ```
 
 > hooks work inside a component not a function.
+
+# Write data with react router actions
+
+> We first have a <Form></Form>
+
+```js
+<Form method="POST"></Form>
+```
+
+> We wired the action to a URL.
+
+```js
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/order/new",
+        element: <CreateOrder />,
+        action: createOrderAction,
+      },
+    ],
+  },
+]);
+```
+
+> We catch the request in the action and do what we have to do.
+
+```js
+export async function action({ request }) {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+  const order = {
+    ...data,
+    cart: JSON.parse(data.cart),
+    priority: data.priority === "on",
+  };
+  // It will do post request
+  const newOrder = await createOrder(order);
+
+  return redirect(`/order/${newOrder.id}`);
+}
+```
+
+# useActionData
+
+> is used to access data returned from action in the component that is connected into that action.
+> This feature is used for error handling.
