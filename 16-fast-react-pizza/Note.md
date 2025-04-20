@@ -32,3 +32,33 @@ const router = createBrowserRouter([
 # Outlet
 
 > Renders the child route's element, if there is one.
+
+# Fetch data with react router loaders
+
+> Steps:
+
+1. create a loader
+2. provide the loader
+3. provide data to the page
+   > It 's better to place a loader of a certain page inside the file of that page.
+
+```js
+function Menu() {
+  const menu = useLoaderData();
+  console.log(menu);
+  return <h1>Menu</h1>;
+}
+
+export async function loader() {
+  const menu = await getMenu();
+  return menu;
+}
+
+// --------------------
+
+{ path: "/menu", element: <Menu />, loader: menuLoader },
+```
+
+# useNavigation
+
+> It's used to understand that whether the application is currently idle,loading or submitting.(for entire application)
