@@ -62,3 +62,26 @@ export async function loader() {
 # useNavigation
 
 > It's used to understand that whether the application is currently idle,loading or submitting.(for entire application)
+
+# useRouteError
+
+```js
+const error = useRouteError();
+// -------------------
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/menu",
+        element: <Menu />,
+        loader: menuLoader,
+        errorElement: <Error />,
+      },
+    ],
+  },
+]);
+```
+
+> hooks work inside a component not a function.
