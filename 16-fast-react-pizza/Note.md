@@ -143,3 +143,8 @@ export async function action({ request }) {
 sm: px - 6;
 // this value will apply for sm and larger screens.
 ```
+
+# To use emoji as favicon
+
+> search emoji as favicon in google.
+> https://css-tricks.com/emoji-as-a-favicon/
