@@ -152,3 +152,7 @@ sm: px - 6;
 # Bad practice
 
 > Connecting redux and input field directly is a bad practice. We need local state.
+
+# useFetcher
+
+> fetch data without navigation
