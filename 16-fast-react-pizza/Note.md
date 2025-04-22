@@ -148,3 +148,7 @@ sm: px - 6;
 
 > search emoji as favicon in google.
 > https://css-tricks.com/emoji-as-a-favicon/
+
+# Bad practice
+
+> Connecting redux and input field directly is a bad practice. We need local state.
