@@ -1,21 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyle";
-import { Button } from "./ui/Button";
+import Button from "./ui/Button";
+import Input from "./ui/Input";
+import Heading from "./ui/Heading";
 // Tagged template literal
-const H1 = styled.h1`
-  font-size: 30px;
-  font-weight: 600;
-  background-color: yellow;
-`;
 
-const Input = styled.input`
-  border: 1px solid var(--color-grey-300);
-  background-color: var(--color-grey-0);
-  border-radius: var(--border-radius-sm);
-  padding: 1.8rem 1.2rem;
-  box-shadow: var(--shadow-sm);
-`;
 const StyledApp = styled.div`
   background-color: orangered;
   padding: 20px;
@@ -26,9 +16,13 @@ function App() {
     <>
       <GlobalStyles />
       <StyledApp>
-        <H1>The Wild Oasis</H1>
+        <Heading as="h1">The Wild Oasis</Heading>
+        <Heading as="h2">Check in and out</Heading>
+
         <Button onClick={() => alert("Check in")}>Check in</Button>
         <Button onClick={() => alert("Check out")}>Check out</Button>
+        <Heading as="h3">Form</Heading>
+
         <Input type="number" placeholder="Number of guests"></Input>
         <Input type="number" placeholder="Number of guests"></Input>
       </StyledApp>
