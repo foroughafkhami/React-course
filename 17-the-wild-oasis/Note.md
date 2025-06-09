@@ -1,5 +1,5 @@
-
 # Ui folder
+
 > it is used for features that doesnt belong to specific feature.
 
 # Styled Component
@@ -8,12 +8,17 @@
 
 ```js
 const H1 = styled.h1`
-font-size:30px;
-font-weight:600;`
-
+  font-size: 30px;
+  font-weight: 600;
+`;
 ```
 
 > Styled component solves name collision problem from global css.
 
 # Global style componet
+
 > It doesnt accept children, it should be the sibling of all the other components.
+
+# React Query
+
+> We setup a place where data can live and then provide that to the application.
