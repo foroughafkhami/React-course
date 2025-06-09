@@ -20,7 +20,7 @@ const sizes = {
   `,
 };
 
-const variations = {
+const variation = {
   primary: css`
     color: var(--color-brand-50);
     background-color: var(--color-brand-600);
@@ -31,7 +31,7 @@ const variations = {
   `,
   secondary: css`
     color: var(--color-grey-600);
-    background: var(--color-grey-0);
+    background-color: var(--color-grey-0);
     border: 1px solid var(--color-grey-200);
 
     &:hover {
@@ -55,7 +55,7 @@ const Button = styled.button`
   box-shadow: var(--shadow-sm);
 
   ${(props) => sizes[props.size]}
-  ${(props) => variations[props.variations]}
+  ${(props) => variation[props.variation]}
 `;
 
 Button.defaultProps = {
