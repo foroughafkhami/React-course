@@ -22,3 +22,10 @@ const H1 = styled.h1`
 # React Query
 
 > We setup a place where data can live and then provide that to the application.
+
+# React hook form
+
+> register function :
+
+1. add onBlur and onChange to the input
+2. can control validation
