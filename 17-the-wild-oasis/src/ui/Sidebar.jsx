@@ -14,8 +14,6 @@ const StyledSidebar = styled.aside`
   gap: 3.2rem;
 `;
 function Sidebar() {
-  const { isLoading, cabins } = useCabins();
-  console.log(cabins);
   return (
     <StyledSidebar>
       <Logo />

@@ -8,13 +8,14 @@ import { useEditCabin } from "./useEditCabin";
 import FormRow from "../../ui/FormRow";
 import { useCreateCabin } from "./useCreateCabin";
 
-function CreateCabinForm({ cabinToEdit }) {
+function CreateCabinForm({ cabinToEdit = {} }) {
   const { isCreating, createCabin } = useCreateCabin();
   const { isEditing, editCabin } = useEditCabin();
-  const isWorking = isCreating || isEditing;
 
+  const isWorking = isCreating || isEditing;
   const { id: editId, ...editValues } = cabinToEdit;
   const isEditSession = Boolean(editId);
+
   const { register, handleSubmit, reset, getValues, formState } = useForm({
     defaultValues: isEditSession ? editValues : {},
   });
@@ -30,7 +31,15 @@ function CreateCabinForm({ cabinToEdit }) {
         { onSuccess: (data) => reset() }
       );
     } else
-      createCabin({ ...data, image: image }, { onSuccess: (data) => reset() });
+      createCabin(
+        { ...data, image: image },
+        {
+          onSuccess: (data) => {
+            console.log(data);
+            reset();
+          },
+        }
+      );
   }
   function onError(errors) {
     // console.log(errors);
